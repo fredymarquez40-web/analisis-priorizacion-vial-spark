@@ -1,10 +1,15 @@
+import sys
 from pyspark.sql import SparkSession, functions as F
 
 spark = SparkSession.builder \
     .appName("Analisis_Lotes_UMV") \
     .getOrCreate()
 
-ruta = "/home/vboxuser/Modelo_de_Priorizaci_n_UMV.csv"
+ruta = (
+    sys.argv[1]
+    if len(sys.argv) > 1
+    else "/home/vboxuser/Modelo_de_Priorizaci_n_UMV.csv"
+)
 
 df = spark.read \
     .option("header", "true") \
