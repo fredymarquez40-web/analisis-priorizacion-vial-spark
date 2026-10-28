@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+Modelo_de_Priorizaci_n_UMV.csv
+resultados_umv/
+graficos_umv/
