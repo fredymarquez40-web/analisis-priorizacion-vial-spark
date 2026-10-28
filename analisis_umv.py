@@ -7,7 +7,7 @@ spark = SparkSession.builder \
 
 ruta = (
     sys.argv[1]
-    if len(sys.argv) > 1
+    if len(sys.argv) > 1:
     else "/home/vboxuser/Modelo_de_Priorizaci_n_UMV.csv"
 )
 
